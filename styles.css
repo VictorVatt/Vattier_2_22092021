@@ -4,14 +4,34 @@ body {
 }
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 1440px;
     margin: auto;
+    justify-content: space-between;
     height: 88px;
+    margin: auto;
+    padding: 0 20px;
+    
 }
 header img {
     margin-top: 0px;
+}
+.nav {
+    display: flex;
+    margin: 0;
+}
+.inscription {
+    display: flex;
+    border-top: 3px solid white;
+    padding: 30px 35px 0px 35px ; 
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    color: #0065FC;
+}
+.nav nav
+{
+    margin: 0;
 }
 nav {
     height: 88px;
@@ -26,7 +46,7 @@ nav ul li {
     display: flex;
     border-top: 3px solid white;
     padding: 30px 35px 0px 35px ; 
-
+    font-weight: bold;
 }
 nav ul li:hover {
     border-top: 3px solid #0065FC;
@@ -34,10 +54,14 @@ nav ul li:hover {
     color: #0065FC;
     animation-duration: 0.1s;
 }
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
 main {
     max-width: 1440px;
     margin: auto;
-    padding: 0px 20px;
+    padding: 0 2rem;
 }
 #recherche h1 {
     font-size: 30px;
@@ -72,7 +96,6 @@ input[type=search] {
     font-size: 18px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    
 }
 #blue_button {
     display: flex;
@@ -85,12 +108,12 @@ input[type=search] {
     background-color: #0065FC;
     color: white;
     cursor: pointer;
-    font-weight: bold;
-    
+    font-weight: bold;   
 }
 #barre_filtre {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .filter {
     display: flex;
@@ -111,7 +134,7 @@ input[type=search] {
 .filter {
     display: flex;
     height: 48px;
-    border: 2px solid #F2F2F2;
+    border: 2px solid #e7e7e7;
     align-items: center;
     justify-content: center;
     margin: 0 20px;
@@ -149,10 +172,10 @@ input[type=search] {
 .hebergement_marseille {
     margin-top: 20px;
     background-color: #F2F2F2;
-    width: 880px;
     border-radius: 20px;
     padding: 0 20px 30px 20px;
     justify-content: space-evenly;
+    width: 60%;
     
 }
 .hebergement_marseille h1 {
@@ -223,11 +246,11 @@ input[type=search] {
     background-color: #F2F2F2;
     margin: 20px 0px 0 40px;
     border-radius: 20px;
-    width: 425px;
+    width: 30%;
     flex-direction: column;
-    padding: 0 47px;
+    padding: 0 45px;
 }
-.cote h1 {
+.cote h2 {
    font-size: 1.5em; 
    padding: 40px 0 0 0px;
    margin: 0px;
@@ -240,11 +263,16 @@ input[type=search] {
     font-size: 25px;
     padding-top: 40px;
 }
+.plus_populaire {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .vignette_2 {
     display: flex;
     background-color: white;
     margin-top: 25px;
-    padding: 6px 0px 6px 6px;
+    padding: 6px 6px 6px 6px;
     border-radius: 20px;
     box-shadow: 0 0 20px #0000002e;
 }
@@ -293,6 +321,7 @@ input[type=search] {
     height: 600px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .vieuxport {
     width: 23%;
@@ -416,16 +445,144 @@ input[type=search] {
     display: flex;
     justify-content: space-around;
     max-width: 1440px;
-    margin: auto;
-    
+    margin: auto; 
+}
+.bold {
+    font-weight: bold;
+    font-size: 18px;
 }
 .footer_container ul li {
     list-style: none;
     padding-top: 20px;
-    font-weight: bold;
 }
-.grey_background
-{
-    background-color: #F2F2F2;
-    padding-bottom: 40px;
+footer {
+    background-color: #e7e7e7;
 }
+@media screen and (max-width: 768px) {
+    
+    #main_content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .mosaique {
+        justify-content: center;
+    }
+    .vignette {
+        width: 40%;
+        margin: 25px;
+    }
+    .vignette_image {
+        width: 100%;
+    }
+    .cote
+    {
+        width: 100%;
+        margin: 20px 0 0 0;
+        padding: 20px;
+    }
+    .hebergement_marseille {
+        width: 106%;
+        margin: 20px 0 0 0;
+        padding: 0 0 25px 0;
+    }
+    .vignette_2 {
+        width: 98%;
+    }
+    .title_container {
+        padding: 0 25px 0 0;
+    }
+    .activites
+    {
+        display: block;
+    }
+    .vignette_3_container {
+        display: block;
+        flex-wrap: wrap;
+    }
+    .vieuxport {
+        height: 48%;
+        width: 100%;
+    }
+    .img_port {
+        height: 80%;
+        width: 100%;
+    }
+    .colonne_2
+    {
+        flex-direction: row;
+        width: 100%;
+        height: 48%;
+    }
+    .pomègues{
+        height: 100%;
+        width: 48%;
+        margin-top: 20px;
+    }
+    .img_pomègues {
+        height: 80%;
+        width: 100%;
+    }
+    .frioul {
+        height: 100%;
+        width: 48%;
+        margin : 20px 0 0 4% ;
+    }
+    .img_frioul {
+        height: 80%;
+        width: 100%;
+    }
+    .calanques {
+        height: 50%;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .img_calanques {
+        height: 80%;
+        width: 100%;
+    } 
+    .colonne_4
+    {
+        flex-direction: row;
+        width: 100%;
+        height: 48%;
+    }
+    .notre_dame {
+        height: 100%;
+        width: 48%;
+        margin-top: 20px;
+    }
+    .img_notre_dame {
+        height: 80%;
+        width: 100%;
+    }
+    .longchamp
+    {
+        height: 100%;
+        width: 48%;
+        margin : 20px 0 0 4% ;
+    }
+    .img_longchamp {
+        height: 80%;
+        width: 100%;
+    }
+    footer {
+        margin-top: 650px;
+    }
+}   
+@media screen and (max-width: 425px) {
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+        
+    
+
+
+
+
+
+
+
+}   
