@@ -2,66 +2,58 @@ body {
     font-family: 'Raleway', sans-serif;
     margin: 0px;
 }
-header {
+
+/* -----------------------------------------------------HEADER------------------------------------- */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.header {
+    display: grid;
+    align-items: center;
+    max-width: 1504px;
+    margin: auto;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar button";
+  }
+  .img_logo {
+    grid-area: logo;
+    padding: 0 2rem;
+    height: 3rem;
+  }
+  .nav {
     display: flex;
     align-items: center;
-    max-width: 1440px;
-    margin: auto;
-    justify-content: space-between;
-    height: 88px;
-    margin: auto;
-    padding: 0 20px;
-    
-}
-header img {
-    margin-top: 0px;
-}
-.nav {
-    display: flex;
-    margin: 0;
-}
-.inscription {
-    display: flex;
-    border-top: 3px solid white;
-    padding: 30px 35px 0px 35px ; 
-    font-weight: bold;
-    text-decoration: none;
-    color: inherit;
-    color: #0065FC;
-}
-.nav nav
-{
-    margin: 0;
-}
-nav {
-    height: 88px;
-    margin-right: 30px;
-}
-nav ul  {
-    display: flex;
-    list-style: none;
-    margin-top: 0px;
-}
-nav ul li {
-    display: flex;
-    border-top: 3px solid white;
-    padding: 30px 35px 0px 35px ; 
-    font-weight: bold;
-}
-nav ul li:hover {
-    border-top: 3px solid #0065FC;
+    grid-area: navbar;
+  }
+  .lien {
+    padding: 2rem;
+    font-weight: 500;
+    text-align: center;
     transition-duration: 0.1s;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .lien:hover {
     color: #0065FC;
-    animation-duration: 0.1s;
+    border-top: 3px solid #0065FC;
+  }
+  .inscription {
+    display: flex;
+    align-items: center;
+    grid-area: button;
+    padding: 2rem;
+    color: #0065FC;
+    font-weight: 600;
 }
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-}
+/* -----------------------------------------------------FIN HEADER------------------------------- */
 main {
     max-width: 1440px;
-    margin: auto;
+    margin:  0 auto;
     padding: 0 2rem;
+    padding-top: 0px;
 }
 #recherche h1 {
     font-size: 30px;
@@ -555,8 +547,7 @@ footer {
         height: 80%;
         width: 100%;
     }
-    .longchamp
-    {
+    .longchamp {
         height: 100%;
         width: 48%;
         margin : 20px 0 0 4% ;
@@ -569,20 +560,97 @@ footer {
         margin-top: 650px;
     }
 }   
-@media screen and (max-width: 425px) {
-    header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+@media screen and (max-width: 600px) {
+    .header {
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo . button" "navbar navbar navbar";
+        padding: 0;
+      }
+      .img_logo {
+        order: 0;
+      }
+      .headerSignup {
+        order: 1;
+      }
+      .nav {
+        order: 2;
+      }
+      .lien {
+        border-top: transparent;
+        border-bottom: 3px solid #F2F2F2;
+        width: 50%;
+      }
+      .lien:hover {
+        border-bottom-color: #0065FC;
+        border-top: none;
+      }
+      input[type=search] {
+          width: 170px;
+      }
+      #blue_button {
+          width: 80px;
+
+      }
+      #blue_button p {
+          font-size: 9px;
+      }
+    .footer_container {
+        display: block;
+        margin-top: 1270px;
     }
-    
-        
-    
-
-
-
-
-
-
-
+    .vignette {
+        margin: 15px 0;
+        width: 80%;
+    }
+    .mosaique {
+        width: auto;
+    }
+    .hebergement_marseille {
+        width: 115%;
+    }
+    .vieuxport {
+        width: auto;
+    }
+    .colonne_2 {
+        flex-direction: column;
+    }
+    .pomègues {
+        width: 100%;
+    }
+    .frioul {
+        width: 100%;
+        margin-left: 0;
+    }
+    .frioul h3 {
+        margin-top: 10px;
+    }
+    .calanques {
+        margin-top: 350px;
+        height: 43%;
+    }
+    .calanques h3 {
+        margin-top: 5px;
+    }
+    .colonne_4 {
+        flex-direction: column;
+    }
+    .notre_dame {
+        width: 100%;
+    }
+    .notre_dame h3 {
+        margin-top: 5px;
+    }
+    .longchamp {
+        width: 100%;
+        margin-left: 0;
+    }
 }   
+@media screen and (max-width: 375px) {
+    .calanques {
+        margin-top: 330px;
+    }
+    .footer_container {
+        margin-top: 1240px;
+    }
+
+}

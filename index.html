@@ -8,23 +8,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" media="screen and (max-width: 425px)" href="smartphones.css" />
         <title>Reservia</title>
     </head>
     <body>
         <!-- Header avec logo et nav-->
-        <header>
-            <img src="/images/logo/Reservia.svg" alt="logo reservia">
-            <div class="nav">
-                <nav>
-                    <ul class="ul">
-                        <li><a href="#hébergement">Hébergement</a></li>
-                        <li><a href="#activity">Activités</a></li>
-                    </ul>
-                </nav>
-                    <a class="inscription" href="#">S'inscrire</a>
-            </div>
+        <header class="header">
+            <img class="img_logo" src="/images/logo/Reservia.svg" alt="Reservia" />
+            <nav class="nav">
+              <a class="lien" href="#hébergement">Hébergement</a>
+              <a class="lien" href="#activity">Activités</a>
+            </nav>
+            <a class="inscription" href="#">S'inscrire</a>
         </header>
+        <!-- FIN HEADER -->
         <main>
             <section id="recherche">
                 <h1>Trouver votre hébergement pour des vacances de rêve</h1>
@@ -36,7 +32,7 @@
                                 <input type="search" name="adresse" value="Marseille, France"/>
                             </p>
                         </form>
-                    <div id="blue_button" >Rechercher</div>
+                    <div id="blue_button" ><p>Rechercher</p></div>
                 </div>
             </section>
             <section id="barre_filtre">
