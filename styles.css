@@ -102,6 +102,11 @@ input[type=search] {
     cursor: pointer;
     font-weight: bold;   
 }
+#blue_button span .desktop_none
+{
+    display: none;
+    
+}
 #barre_filtre {
     display: flex;
     align-items: center;
@@ -588,11 +593,17 @@ footer {
           width: 170px;
       }
       #blue_button {
-          width: 80px;
+          width: 50px;
+          border-radius: 10px;
+          margin-left: -10px;
 
       }
       #blue_button p {
-          font-size: 9px;
+          display: none;
+      }
+      #blue_button span .desktop_none  {
+          color: white;
+          display: block;
       }
     .footer_container {
         display: block;
@@ -625,7 +636,7 @@ footer {
         margin-top: 10px;
     }
     .calanques {
-        margin-top: 300px;
+        margin-top: 350px;
         height: 43%;
     }
     .calanques h3 {
