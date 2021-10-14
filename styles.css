@@ -11,14 +11,14 @@ a {
 .header {
     display: grid;
     align-items: center;
-    max-width: 1504px;
+    max-width: 1440px;
     margin: auto;
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas: "logo . navbar button";
   }
   .img_logo {
     grid-area: logo;
-    padding: 0 2rem;
+    padding: 0 1rem;
     height: 3rem;
   }
   .nav {
@@ -33,7 +33,6 @@ a {
     transition-duration: 0.1s;
     border-top: 3px transparent solid;
     border-bottom: 3px transparent solid;
-    font-weight: bold;
     font-size: 16px;
   }
   .lien:hover {
@@ -52,8 +51,10 @@ a {
 main {
     max-width: 1440px;
     margin:  0 auto;
-    padding: 0 2rem;
     padding-top: 0px;
+}
+.top-recherche {
+    padding: 0 1rem;
 }
 #recherche h1 {
     font-size: 30px;
@@ -168,6 +169,7 @@ input[type=search] {
 }
 .hebergement_marseille {
     margin-top: 20px;
+    margin-left: 1rem;
     background-color: #F2F2F2;
     border-radius: 20px;
     padding: 0 20px 30px 20px;
@@ -175,11 +177,11 @@ input[type=search] {
     width: 60%;
     
 }
-.hebergement_marseille h1 {
+.hebergement_marseille h2 {
     margin: 0;
     font-size: 1.5em;
     padding-top: 40px;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 .vignette {
     background-color: white;
@@ -241,7 +243,7 @@ input[type=search] {
 .cote {
     display: flex;
     background-color: #F2F2F2;
-    margin: 20px 0px 0 40px;
+    margin: 20px 1rem 0 40px;
     border-radius: 20px;
     width: 30%;
     flex-direction: column;
@@ -310,12 +312,11 @@ input[type=search] {
     padding-left: 20px;
 }
 .activites {
-    margin: 60px 0;
+    margin: 60px 1rem;
     
 }
 .vignette_3_container {
     width: 100%;
-    height: 600px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -422,7 +423,7 @@ input[type=search] {
 }
 .longchamp {
     width: 100%;
-    height: 380px;
+    height: 320px;
     border-radius: 15px;
     box-shadow: 0 0 20px #0000002e;
     margin-top: 60px;
@@ -440,7 +441,7 @@ input[type=search] {
 }
 .footer_container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 1440px;
     margin: auto; 
 }
@@ -451,6 +452,11 @@ input[type=search] {
 .footer_container ul li {
     list-style: none;
     padding-top: 20px;
+
+}
+.ul_3 {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
 }
 footer {
     background-color: #e7e7e7;
@@ -474,19 +480,31 @@ footer {
     .cote
     {
         width: 100%;
-        margin: 20px 0 0 0;
-        padding: 20px;
+        padding:  1rem 0;
+        margin: 0;
+        border-radius: 0;
+    }
+    .title_container h2  {
+        padding: 1rem 0;
+    }
+    .title_container .fas {
+        padding: 1rem 0;
     }
     .hebergement_marseille {
-        width: 106%;
-        margin: 20px 0 0 0;
+        margin: 0;
         padding: 0 0 25px 0;
+        width: 100%;
+        border-radius: 0;
+        background-color: white;
+    }
+    .mosaique {
+        margin-top: 1rem;
     }
     .vignette_2 {
-        width: 98%;
+        margin: 0.5rem 1rem;
     }
     .title_container {
-        padding: 0 25px 0 0;
+        padding: 0 1rem  ;
     }
     .activites
     {
@@ -497,18 +515,17 @@ footer {
         flex-wrap: wrap;
     }
     .vieuxport {
-        height: 48%;
+        height: 300px;
         width: 100%;
     }
     .img_port {
         height: 80%;
-        width: 100%;
     }
     .colonne_2
     {
         flex-direction: row;
         width: 100%;
-        height: 48%;
+        height: 300px;
     }
     .pomegues{
         height: 100%;
@@ -529,7 +546,7 @@ footer {
         width: 100%;
     }
     .calanques {
-        height: 50%;
+        height: 300px;
         width: 100%;
         margin-top: 40px;
     }
@@ -541,7 +558,7 @@ footer {
     {
         flex-direction: row;
         width: 100%;
-        height: 48%;
+        height: 300px;
     }
     .notre_dame {
         height: 100%;
@@ -561,11 +578,11 @@ footer {
         height: 80%;
         width: 100%;
     }
-    footer {
-        margin-top: 650px;
-    }
 }   
 @media screen and (max-width: 600px) {
+    #recherche h1 {
+        font-size: 23px;
+    }
     .header {
         grid-template-columns: auto 1fr auto;
         grid-template-areas: "logo . button" "navbar navbar navbar";
@@ -583,20 +600,27 @@ footer {
       .lien {
         border-top: transparent;
         border-bottom: 3px solid #F2F2F2;
+        padding-top: 0;
+        padding-bottom: 1rem;
         width: 50%;
       }
       .lien:hover {
         border-bottom-color: #0065FC;
         border-top: none;
       }
+      .activites {
+          margin-top: 1rem;
+      }
       input[type=search] {
-          width: 170px;
+          width: 100%;
       }
       #blue_button {
           width: 50px;
           border-radius: 10px;
           margin-left: -10px;
-
+      }
+      #barre_recherche {
+          padding-left: 0.5rem;
       }
       #blue_button p {
           display: none;
@@ -605,63 +629,87 @@ footer {
           color: white;
           display: block;
       }
+    #p_filtre { width: 100%;}
     .footer_container {
         display: block;
         margin-top: 1270px;
     }
+    .filter {
+        margin: 0.4rem;
+    }
     .vignette {
         margin: 15px 0;
-        width: 80%;
+        width: 90%;
     }
     .mosaique {
         width: auto;
     }
-    .hebergement_marseille {
-        width: 115%;
+    .more {
+        padding: 0;
+        padding-left: 1rem;
+        padding-top: 15px;
+        font-size: 18px;
     }
     .vieuxport {
-        width: auto;
+        height: 220px;
+    }
+    .img_port {
+        height: 75%;
+    }
+    .mini_titre {
+        margin-top: 10px;
     }
     .colonne_2 {
         flex-direction: column;
+    
     }
     .pomegues {
         width: 100%;
+        height: 220px;
+    }
+    .img_pomegues {
+        height: 75%;
     }
     .frioul {
         width: 100%;
         margin-left: 0;
+        height: 220px;
+    }
+    .img_frioul {
+        height: 75%;
     }
     .frioul h3 {
         margin-top: 10px;
     }
     .calanques {
-        margin-top: 350px;
-        height: 43%;
+        height: 220px;
+        margin-top: 200px;
     }
-    .calanques h3 {
-        margin-top: 5px;
-        font-size: 16px;
+    .img_calanques{
+        height: 75%;
     }
     .colonne_4 {
         flex-direction: column;
     }
     .notre_dame {
         width: 100%;
+        height: 220px;
     }
-    .notre_dame h3 {
-        margin-top: 5px;
+    .img_notre_dame {
+        height: 75%;
     }
     .longchamp {
         width: 100%;
         margin-left: 0;
+        height: 220px;
     }
-}   
-@media screen and (max-width: 375px) {
-    .calanques {
-        margin-top: 330px;
+    .img_longchamp {
+        height: 75%;
+    }
+    footer {
+        margin: 0;
     }
     .footer_container {
-        margin-top: 1240px;
+        margin-top: 220px;
     }
-}
+}   
