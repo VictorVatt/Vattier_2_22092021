@@ -231,10 +231,12 @@ input[type=search] {
     color: #c9c9c9;
 }
 .more {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bolder;
     margin: 20px 0 0 0;
     padding-left: 30px;
+    position: relative;
+    top: 15px;
 }
 #main_content {
     display: flex;
