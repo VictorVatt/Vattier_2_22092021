@@ -456,8 +456,16 @@ input[type=search] {
     padding-top: 20px;
 
 }
+.ul_1 {
+    padding: 1rem;
+}
+.ul_2 {
+    padding: 1rem;
+}
 .ul_3 {
     padding-bottom: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-bottom: 0;
 }
 footer {
